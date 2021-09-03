@@ -1,0 +1,67 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '19f70a359571a530e28b41594938e2d0' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":157,"source":1,"property_preprocess":0,"name":"smushit","description":"This is an output filter that processes images with http:\\/\\/resmush.it\\/api in an attempt to reduce filesizes. Created by Stewart Orr @ Qodo Ltd. https:\\/\\/www.qodo.co.uk","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * smushit\\n *\\n * This snippet tries to optimise and compress PNG and JPEG images for better \\n * performance using the resmush.it optimisation API. This will help massively \\n * with Google Page Speed and can reduce image sizes by up to 70%. This will \\n * overwrite any existing images so is intended to be used as an output filter \\n * after pthumb or similar.\\n *\\n * This uses resmush.it API: http:\\/\\/resmush.it\\/\\n *\\n * smushit is free software; you can redistribute it and\\/or modify it\\n * under the terms of the GNU General Public License as published by the Free\\n * Software Foundation; either version 2 of the License, or (at your option) any\\n * later version.\\n *\\n * smushit is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n\\n * @author Stewart Orr @ Qodo Ltd <stewart@qodo.co.uk>\\n * @version 1.0\\n * @copyright Copyright Qodo Ltd 2016\\n *\\/\\n\\nif (!function_exists(\'smushitFormatBytes\')) {\\n    function smushitFormatBytes($bytes, $decimals = 2) {\\n        $size = array(\'B\',\'kB\',\'MB\',\'GB\',\'TB\',\'PB\',\'EB\',\'ZB\',\'YB\');\\n        $factor = floor((strlen($bytes) - 1) \\/ 3);\\n        return sprintf(\\"%.{$decimals}f\\", $bytes \\/ pow(1024, $factor)) . @$size[$factor];\\n    }\\n}\\n\\n\\/\\/ If image file is not blank and the image exists\\nif (!empty($input) && file_exists(MODX_BASE_PATH . $input)) {\\n    \\n    \\/\\/ Variables\\n    $site_url = $modx->getOption(\'site_url\');\\n    $image = json_decode(file_get_contents(\'http:\\/\\/api.resmush.it\\/ws.php?img=\' . $site_url . $input));\\n    $original = filesize(MODX_BASE_PATH . $input);\\n    \\n    \\/\\/ If there is an error, report it\\n    if (isset($image->error)){\\n        $modx->log(modX::LOG_LEVEL_ERROR, \'[smushit] Could not optimise image: \' . $site_url . $input);\\n        return $input;\\n    }\\n\\n    \\/\\/ Save the remote image overwriting the original\\n    copy($image->dest, MODX_BASE_PATH . $input) or die(\\"Could not save remote image.\\");\\n    \\n    \\/\\/ Get optimised image filesize\\n    $optimised = filesize(MODX_BASE_PATH . $input);\\n        \\n    \\/\\/ Log the savings\\n    $modx->log(modX::LOG_LEVEL_DEBUG, \\"[smushit] $input > Original \\" . smushitFormatBytes($original) . \\" vs. optimised \\" . smushitFormatBytes($optimised) . \\" \\" . number_format(100 - (($optimised\\/$original)*100), 2)  . \\"% saving.\\");\\n    return $input;\\n    \\n} else {\\n    \\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[smushit] Something is wrong with the input image: \' . MODX_BASE_PATH . $input);\\n    \\/\\/ Return whatever was provided\\n    return $input;\\n    \\n}","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * smushit\\n *\\n * This snippet tries to optimise and compress PNG and JPEG images for better \\n * performance using the resmush.it optimisation API. This will help massively \\n * with Google Page Speed and can reduce image sizes by up to 70%. This will \\n * overwrite any existing images so is intended to be used as an output filter \\n * after pthumb or similar.\\n *\\n * This uses resmush.it API: http:\\/\\/resmush.it\\/\\n *\\n * smushit is free software; you can redistribute it and\\/or modify it\\n * under the terms of the GNU General Public License as published by the Free\\n * Software Foundation; either version 2 of the License, or (at your option) any\\n * later version.\\n *\\n * smushit is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n\\n * @author Stewart Orr @ Qodo Ltd <stewart@qodo.co.uk>\\n * @version 1.0\\n * @copyright Copyright Qodo Ltd 2016\\n *\\/\\n\\nif (!function_exists(\'smushitFormatBytes\')) {\\n    function smushitFormatBytes($bytes, $decimals = 2) {\\n        $size = array(\'B\',\'kB\',\'MB\',\'GB\',\'TB\',\'PB\',\'EB\',\'ZB\',\'YB\');\\n        $factor = floor((strlen($bytes) - 1) \\/ 3);\\n        return sprintf(\\"%.{$decimals}f\\", $bytes \\/ pow(1024, $factor)) . @$size[$factor];\\n    }\\n}\\n\\n\\/\\/ If image file is not blank and the image exists\\nif (!empty($input) && file_exists(MODX_BASE_PATH . $input)) {\\n    \\n    \\/\\/ Variables\\n    $site_url = $modx->getOption(\'site_url\');\\n    $image = json_decode(file_get_contents(\'http:\\/\\/api.resmush.it\\/ws.php?img=\' . $site_url . $input));\\n    $original = filesize(MODX_BASE_PATH . $input);\\n    \\n    \\/\\/ If there is an error, report it\\n    if (isset($image->error)){\\n        $modx->log(modX::LOG_LEVEL_ERROR, \'[smushit] Could not optimise image: \' . $site_url . $input);\\n        return $input;\\n    }\\n\\n    \\/\\/ Save the remote image overwriting the original\\n    copy($image->dest, MODX_BASE_PATH . $input) or die(\\"Could not save remote image.\\");\\n    \\n    \\/\\/ Get optimised image filesize\\n    $optimised = filesize(MODX_BASE_PATH . $input);\\n        \\n    \\/\\/ Log the savings\\n    $modx->log(modX::LOG_LEVEL_DEBUG, \\"[smushit] $input > Original \\" . smushitFormatBytes($original) . \\" vs. optimised \\" . smushitFormatBytes($optimised) . \\" \\" . number_format(100 - (($optimised\\/$original)*100), 2)  . \\"% saving.\\");\\n    return $input;\\n    \\n} else {\\n    \\n    $modx->log(modX::LOG_LEVEL_ERROR, \'[smushit] Something is wrong with the input image: \' . MODX_BASE_PATH . $input);\\n    \\/\\/ Return whatever was provided\\n    return $input;\\n    \\n}"}',
+        'guid' => '80d9d719d03dec252cdf0f9a3819426f',
+        'native_key' => 157,
+        'signature' => '79a227a7f5a25c282046fee4c8b30633',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'TemplateVars' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'Templates' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'templatename',
+    ),
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'smushit',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"smushit-1.0-beta1\\/modCategory\\/3851d0e07e284be7ae98a6de76604e1c\\/0\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"smushit"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'be98eaa09185f7d01e05ceabecd38b08',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '3851d0e07e284be7ae98a6de76604e1c',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"smushit","rank":0}',
+);

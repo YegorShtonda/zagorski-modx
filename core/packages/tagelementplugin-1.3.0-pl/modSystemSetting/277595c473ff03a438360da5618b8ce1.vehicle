@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'tagelementplugin',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '53f14403d91d780b51cd5832ec366f7a',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '277595c473ff03a438360da5618b8ce1',
+  'native_key' => 'tagelementplugin_element_prop_keys',
+  'object' => '{"key":"tagelementplugin_element_prop_keys","value":"{key: Ext.EventObject.INSERT, ctrl: true, shift: false, alt: false}","xtype":"textfield","namespace":"tagelementplugin","area":"tagelementplugin_main","editedon":null}',
+);

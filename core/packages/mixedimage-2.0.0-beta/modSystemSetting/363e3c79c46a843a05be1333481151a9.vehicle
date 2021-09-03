@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mixedimage',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '7b8e4fa53066884ae268776af6da4f47',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '363e3c79c46a843a05be1333481151a9',
+  'native_key' => 'mixedimage.check_resid',
+  'object' => '{"key":"mixedimage.check_resid","value":true,"xtype":"combo-boolean","namespace":"mixedimage","area":"Default","editedon":null}',
+);

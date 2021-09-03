@@ -1,0 +1,190 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Plugins' => 
+    array (
+      '364f7dd0c296daa5c66e721719534093' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modPlugin',
+        'object' => '{"id":null,"source":1,"property_preprocess":0,"name":"tagElementPlugin","description":"","editor_type":0,"category":0,"cache_type":0,"plugincode":"switch ($modx->event->name) {\\n    case \'OnDocFormPrerender\':\\n        $field = \'ta\';\\n        $panel = \'\';\\n        break;\\n    case \'OnTempFormPrerender\':\\n        $field = \'modx-template-content\';\\n        $panel = \'modx-panel-template\';\\n        break;\\n    case \'OnChunkFormPrerender\':\\n        $field = \'modx-chunk-snippet\';\\n        $panel = \'modx-panel-chunk\';\\n        break;\\n    case \'OnSnipFormPrerender\':\\n        $field = \'modx-snippet-snippet\';\\n        $panel = \'modx-panel-snippet\';\\n        break;\\n    case \'OnPluginFormPrerender\':\\n        $field = \'modx-plugin-plugincode\';\\n        $panel = \'modx-panel-plugin\';\\n        break;\\n    case \'OnFileEditFormPrerender\':\\n        $field = \'modx-file-content\';\\n        $panel = \'modx-panel-file-edit\';\\n        break;\\n    default:\\n        return;\\n}\\nif (!empty($field)) {\\n    $modx->controller->addLexiconTopic(\'core:chunk\');\\n    $modx->controller->addLexiconTopic(\'core:snippet\');\\n    $modx->controller->addLexiconTopic(\'tagelementplugin:default\');\\n    $jsUrl = $modx->getOption(\'tagelementplugin_assets_url\', null, $modx->getOption(\'assets_url\') . \'components\\/tagelementplugin\\/\').\'js\\/mgr\\/\';\\n    \\/** @var modManagerController *\\/\\n    $modx->controller->addLastJavascript($jsUrl.\'tagelementplugin.js\');\\n    $modx->controller->addLastJavascript($jsUrl.\'dialogs.js\');\\n    $usingFenon = $modx->getOption(\'pdotools_fenom_parser\', null, false) ? \'true\' : \'false\';\\n    $connectorUrl = $modx->getOption(\\"tagelementplugin_assets_url\\", null, $modx->getOption(\\"assets_url\\") . \\"components\\/tagelementplugin\\/\\").\\"connector.php\\";\\n    $_html = <<<SCRIPT\\n<script type=\\"text\\/javascript\\">\\n    var tagElPlugin = {};\\n    tagElPlugin.config = {\\n        panel : \'{$panel}\',\\n        field : \'{$field}\',\\n        parent : [],\\n        keys : {\\n        \\tquickEditor: {$modx->getOption(\'tagelementplugin_quick_editor_keys\', null, \'\')},\\n            elementEditor: {$modx->getOption(\'tagelementplugin_element_editor_keys\', null, \'\')},\\n            chunkEditor: {$modx->getOption(\'tagelementplugin_chunk_editor_keys\', null, \'\')},\\n            quickChunkEditor: {$modx->getOption(\'tagelementplugin_quick_chunk_editor_keys\', null,\' \')},\\n            elementProperties: {$modx->getOption(\'tagelementplugin_element_prop_keys\', null, \'\')}\\n        },\\n        using_fenom: {$usingFenon},\\n        elementEditor: \'{$modx->getOption(\\"which_element_editor\\")}\',\\n        connector_url: \'{$connectorUrl}\'\\n    };\\n<\\/script>\\nSCRIPT;\\n    $modx->controller->addHtml($_html);\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"core\\/components\\/tagelementplugin\\/elements\\/plugins\\/plugin.tagelementplugin.php","content":"switch ($modx->event->name) {\\n    case \'OnDocFormPrerender\':\\n        $field = \'ta\';\\n        $panel = \'\';\\n        break;\\n    case \'OnTempFormPrerender\':\\n        $field = \'modx-template-content\';\\n        $panel = \'modx-panel-template\';\\n        break;\\n    case \'OnChunkFormPrerender\':\\n        $field = \'modx-chunk-snippet\';\\n        $panel = \'modx-panel-chunk\';\\n        break;\\n    case \'OnSnipFormPrerender\':\\n        $field = \'modx-snippet-snippet\';\\n        $panel = \'modx-panel-snippet\';\\n        break;\\n    case \'OnPluginFormPrerender\':\\n        $field = \'modx-plugin-plugincode\';\\n        $panel = \'modx-panel-plugin\';\\n        break;\\n    case \'OnFileEditFormPrerender\':\\n        $field = \'modx-file-content\';\\n        $panel = \'modx-panel-file-edit\';\\n        break;\\n    default:\\n        return;\\n}\\nif (!empty($field)) {\\n    $modx->controller->addLexiconTopic(\'core:chunk\');\\n    $modx->controller->addLexiconTopic(\'core:snippet\');\\n    $modx->controller->addLexiconTopic(\'tagelementplugin:default\');\\n    $jsUrl = $modx->getOption(\'tagelementplugin_assets_url\', null, $modx->getOption(\'assets_url\') . \'components\\/tagelementplugin\\/\').\'js\\/mgr\\/\';\\n    \\/** @var modManagerController *\\/\\n    $modx->controller->addLastJavascript($jsUrl.\'tagelementplugin.js\');\\n    $modx->controller->addLastJavascript($jsUrl.\'dialogs.js\');\\n    $usingFenon = $modx->getOption(\'pdotools_fenom_parser\', null, false) ? \'true\' : \'false\';\\n    $connectorUrl = $modx->getOption(\\"tagelementplugin_assets_url\\", null, $modx->getOption(\\"assets_url\\") . \\"components\\/tagelementplugin\\/\\").\\"connector.php\\";\\n    $_html = <<<SCRIPT\\n<script type=\\"text\\/javascript\\">\\n    var tagElPlugin = {};\\n    tagElPlugin.config = {\\n        panel : \'{$panel}\',\\n        field : \'{$field}\',\\n        parent : [],\\n        keys : {\\n        \\tquickEditor: {$modx->getOption(\'tagelementplugin_quick_editor_keys\', null, \'\')},\\n            elementEditor: {$modx->getOption(\'tagelementplugin_element_editor_keys\', null, \'\')},\\n            chunkEditor: {$modx->getOption(\'tagelementplugin_chunk_editor_keys\', null, \'\')},\\n            quickChunkEditor: {$modx->getOption(\'tagelementplugin_quick_chunk_editor_keys\', null,\' \')},\\n            elementProperties: {$modx->getOption(\'tagelementplugin_element_prop_keys\', null, \'\')}\\n        },\\n        using_fenom: {$usingFenon},\\n        elementEditor: \'{$modx->getOption(\\"which_element_editor\\")}\',\\n        connector_url: \'{$connectorUrl}\'\\n    };\\n<\\/script>\\nSCRIPT;\\n    $modx->controller->addHtml($_html);\\n}"}',
+        'guid' => 'de3fd4691b26b411204efa0970e22462',
+        'native_key' => NULL,
+        'signature' => '4f922d24634d43cc256a346c81f0d999',
+        'related_objects' => 
+        array (
+          'PluginEvents' => 
+          array (
+            'd81a8e71c37e24f899baa3c103122b13' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnChunkFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '41331e1c21fcbcde5e424c8a62789015',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnChunkFormPrerender',
+              ),
+              'signature' => '36b5c362a2b91dc91d2f67d9549a538a',
+            ),
+            '3422922c4fe56871e89d5e3e503ddd46' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '87f3accc7e1fd52be378bf486c91e2f2',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnDocFormPrerender',
+              ),
+              'signature' => 'd28b0293a8bc120b83b3b8d2e73f485c',
+            ),
+            '3ec0f67168e8db78aa64dead370f5b6e' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnTempFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '2ca4a45cf9f15e2d6c27ac0d47deac9e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnTempFormPrerender',
+              ),
+              'signature' => '25fbac49013849b67410c25ab34a2a8e',
+            ),
+            '8687cb0788901add8dd4a6ffbe9b687e' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnSnipFormPrerender","priority":0,"propertyset":0}',
+              'guid' => 'a66b992573dcf4edcdf223bdc565ba57',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnSnipFormPrerender',
+              ),
+              'signature' => 'f0308d952281d993556e771e066f916e',
+            ),
+            '615edf83ec6956e2752befb57a08a283' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnPluginFormPrerender","priority":0,"propertyset":0}',
+              'guid' => 'bb79cbb5ab09aa7a1c6bc18d77f0bb6a',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnPluginFormPrerender',
+              ),
+              'signature' => '1fec61a5e323fc3cba44735c4d94f7dd',
+            ),
+            'd0c1c734373b1cae828fb0b6824c05c9' => 
+            array (
+              'preserve_keys' => true,
+              'update_object' => true,
+              'unique_key' => 
+              array (
+                0 => 'pluginid',
+                1 => 'event',
+              ),
+              'class' => 'modPluginEvent',
+              'object' => '{"pluginid":0,"event":"OnFileEditFormPrerender","priority":0,"propertyset":0}',
+              'guid' => '3d2d2121b4e7ba721ffa9cee6aab032e',
+              'native_key' => 
+              array (
+                0 => 0,
+                1 => 'OnFileEditFormPrerender',
+              ),
+              'signature' => 'b42be6b331da90b5e3e92c76dcba93ad',
+            ),
+          ),
+        ),
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Chunks' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => false,
+      'unique_key' => 'name',
+    ),
+    'Plugins' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => true,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'tagelementplugin',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tagelementplugin-1.3.0-pl\\/modCategory\\/645b3a6bc1e40ffc904976803a3ef29f\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"tagelementplugin"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"tagelementplugin-1.3.0-pl\\/modCategory\\/645b3a6bc1e40ffc904976803a3ef29f\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"tagelementplugin"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => '4d88c6236c9ebce1a4fcffcd96c2e6f1',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '645b3a6bc1e40ffc904976803a3ef29f',
+  'native_key' => NULL,
+  'object' => '{"id":null,"parent":0,"category":"tagElementPlugin","rank":0}',
+);

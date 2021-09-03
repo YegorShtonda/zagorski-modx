@@ -1,0 +1,67 @@
+<?php  return array (
+  1 => 
+  array (
+    'id' => '1',
+    'namespace' => 'collections',
+    'controller' => 'index',
+    'haslayout' => '1',
+    'lang_topics' => 'collections:default',
+    'assets' => '',
+    'help_url' => '',
+    'namespace_name' => 'collections',
+    'namespace_path' => '/home/zagorski/zagorski.com.ua/www/core/components/collections/',
+    'namespace_assets_path' => '{assets_path}components/collections/',
+  ),
+  2 => 
+  array (
+    'id' => '2',
+    'namespace' => 'dbadmin',
+    'controller' => 'index',
+    'haslayout' => '1',
+    'lang_topics' => 'dbadmin:default',
+    'assets' => '',
+    'help_url' => '',
+    'namespace_name' => 'dbadmin',
+    'namespace_path' => '/home/zagorski/zagorski.com.ua/www/core/components/dbadmin/',
+    'namespace_assets_path' => '{base_path}dbAdmin/assets/components/dbadmin/',
+  ),
+  6 => 
+  array (
+    'id' => '6',
+    'namespace' => 'migx',
+    'controller' => 'index',
+    'haslayout' => '0',
+    'lang_topics' => 'example:default',
+    'assets' => '',
+    'help_url' => '',
+    'namespace_name' => 'migx',
+    'namespace_path' => '/home/zagorski/zagorski.com.ua/www/core/components/migx/',
+    'namespace_assets_path' => '{assets_path}components/migx/',
+  ),
+  4 => 
+  array (
+    'id' => '4',
+    'namespace' => 'moddevtools',
+    'controller' => 'index',
+    'haslayout' => '1',
+    'lang_topics' => 'moddevtools:default',
+    'assets' => '',
+    'help_url' => '',
+    'namespace_name' => 'moddevtools',
+    'namespace_path' => '/home/zagorski/zagorski.com.ua/www/core/components/moddevtools/',
+    'namespace_assets_path' => '{base_path}extras/modDevTools/assets/components/moddevtools/',
+  ),
+  7 => 
+  array (
+    'id' => '7',
+    'namespace' => 'redirector',
+    'controller' => 'index',
+    'haslayout' => '1',
+    'lang_topics' => 'redirector:default',
+    'assets' => '',
+    'help_url' => '',
+    'namespace_name' => 'redirector',
+    'namespace_path' => '/home/zagorski/zagorski.com.ua/www/core/components/redirector/',
+    'namespace_assets_path' => '{assets_path}components/redirector/',
+  ),
+);

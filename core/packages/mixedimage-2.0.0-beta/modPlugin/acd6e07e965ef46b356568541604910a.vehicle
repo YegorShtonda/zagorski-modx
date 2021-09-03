@@ -1,0 +1,180 @@
+<?php return array (
+  'unique_key' => 'name',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'PluginEvents' => 
+    array (
+      '7b3e49e72d2b728780c5b0a7574102f8' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnDocFormPrerender","priority":0,"propertyset":0}',
+        'guid' => 'b6bf9abdcf1bc0c016040ced5ec5d08f',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnDocFormPrerender',
+        ),
+        'signature' => 'b27d7ba14a0303071d48c6df210a3d01',
+      ),
+      'd858535e32f7ea1bfc199c65e2197965' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnTVInputPropertiesList","priority":0,"propertyset":0}',
+        'guid' => 'a9a6f8245f2bb59c1f9d67d7f502fe7b',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnTVInputPropertiesList',
+        ),
+        'signature' => '2dc58fef81afba09b490add8c2b69624',
+      ),
+      '122f5326b822a5b55e48a4cc1e22f8ce' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnTVInputRenderList","priority":0,"propertyset":0}',
+        'guid' => 'df15a13c7f6c3f9ab36f4deeca1f3ddb',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnTVInputRenderList',
+        ),
+        'signature' => '43d4c151a0d3da57f41bfe836dd97162',
+      ),
+      '46ab56b71eb5bd953e55d41edb54bdcf' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnTVOutputRenderList","priority":0,"propertyset":0}',
+        'guid' => '45257ab0078d9935e0d4f32a94c26e06',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnTVOutputRenderList',
+        ),
+        'signature' => '752a2e51d7769092d159786b5ee29a1e',
+      ),
+      'ea4af049b6891b6a22681aa2531d77a4' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnTVOutputRenderPropertiesList","priority":0,"propertyset":0}',
+        'guid' => '75f8c7374d761c31d0053e519d68e85b',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnTVOutputRenderPropertiesList',
+        ),
+        'signature' => 'ee00d4cf5983780e36479bbc91a1b43f',
+      ),
+      '785913aab3b9f8c3ab61c859f6b1af62' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnMODXInit","priority":0,"propertyset":0}',
+        'guid' => 'a025a62db94ec374b12c00d9f4a56e4f',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnMODXInit',
+        ),
+        'signature' => '1773b848a0c4d1a8e7ca04f3b3a674ec',
+      ),
+      'fff158c3d6a116c1501976f077d97f51' => 
+      array (
+        'preserve_keys' => true,
+        'update_object' => false,
+        'unique_key' => 
+        array (
+          0 => 'pluginid',
+          1 => 'event',
+        ),
+        'class' => 'modPluginEvent',
+        'object' => '{"pluginid":0,"event":"OnLoadWebDocument","priority":0,"propertyset":0}',
+        'guid' => '0a16e608409293e5e8f36e9928e70e27',
+        'native_key' => 
+        array (
+          0 => 0,
+          1 => 'OnLoadWebDocument',
+        ),
+        'signature' => 'b6ef13ba2c87529dd33947ec75fe3511',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'PluginEvents' => 
+    array (
+      'preserve_keys' => true,
+      'update_object' => false,
+      'unique_key' => 
+      array (
+        0 => 'pluginid',
+        1 => 'event',
+      ),
+    ),
+  ),
+  'namespace' => 'mixedimage',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mixedimage-2.0.0-beta\\/modPlugin\\/acd6e07e965ef46b356568541604910a\\/0\\/","target":"return MODX_ASSETS_PATH . \'components\\/\';","name":"mixedimage"}',
+    ),
+    1 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"mixedimage-2.0.0-beta\\/modPlugin\\/acd6e07e965ef46b356568541604910a\\/1\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"mixedimage"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'd9f9be04c79e4e3206df654c26b7c5ae',
+  'package' => 'modx',
+  'class' => 'modPlugin',
+  'signature' => 'acd6e07e965ef46b356568541604910a',
+  'native_key' => 1,
+  'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"mixedImage","description":"mixedImage 2.0.0-beta plugin for MODx Revolution","editor_type":0,"category":0,"cache_type":0,"plugincode":"$corePath = $modx->getOption(\'core_path\',null,MODX_CORE_PATH).\'components\\/mixedimage\\/\';\\n$assetsUrl = $modx->getOption(\'assets_url\',null,MODX_ASSETS_URL).\'components\\/mixedimage\\/\';\\n\\n$modx->lexicon->load(\'mixedimage:default\');\\n\\nswitch ($modx->event->name) {\\n    case \'OnTVInputRenderList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/input\\/\');\\n        break;\\n    case \'OnTVOutputRenderList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/output\\/\');\\n        break;\\n    case \'OnTVInputPropertiesList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/input\\/options\\/\');\\n        break;\\n    case \'OnTVOutputRenderPropertiesList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/properties\\/\');\\n        break;\\n    case \'OnDocFormPrerender\':\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/mgr\\/mixedimage.js\');\\n        $modx->regClientCSS($assetsUrl.\'css\\/mgr\\/mixedimage.css\');\\n        $modx->controller->addLexiconTopic(\'mixedimage:default\');\\n        break;\\n    case \'OnMODXInit\':\\n    case \'OnLoadWebDocument\':\\n        $mTypes = $modx->getOption(\'manipulatable_url_tv_output_types\',null,\'image,file\').\',mixedimage\';\\n        $modx->setOption(\'manipulatable_url_tv_output_types\', $mTypes);\\n        break;\\n}","locked":0,"properties":null,"disabled":0,"moduleguid":"","static":0,"static_file":"","content":"$corePath = $modx->getOption(\'core_path\',null,MODX_CORE_PATH).\'components\\/mixedimage\\/\';\\n$assetsUrl = $modx->getOption(\'assets_url\',null,MODX_ASSETS_URL).\'components\\/mixedimage\\/\';\\n\\n$modx->lexicon->load(\'mixedimage:default\');\\n\\nswitch ($modx->event->name) {\\n    case \'OnTVInputRenderList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/input\\/\');\\n        break;\\n    case \'OnTVOutputRenderList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/output\\/\');\\n        break;\\n    case \'OnTVInputPropertiesList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/input\\/options\\/\');\\n        break;\\n    case \'OnTVOutputRenderPropertiesList\':\\n        $modx->event->output($corePath.\'elements\\/tv\\/properties\\/\');\\n        break;\\n    case \'OnDocFormPrerender\':\\n        $modx->regClientStartupScript($assetsUrl.\'js\\/mgr\\/mixedimage.js\');\\n        $modx->regClientCSS($assetsUrl.\'css\\/mgr\\/mixedimage.css\');\\n        $modx->controller->addLexiconTopic(\'mixedimage:default\');\\n        break;\\n    case \'OnMODXInit\':\\n    case \'OnLoadWebDocument\':\\n        $mTypes = $modx->getOption(\'manipulatable_url_tv_output_types\',null,\'image,file\').\',mixedimage\';\\n        $modx->setOption(\'manipulatable_url_tv_output_types\', $mTypes);\\n        break;\\n}"}',
+);

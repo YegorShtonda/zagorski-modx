@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'googlesitemap',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'ced869394fc36cc6be0be07503ce2910',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => '69f20ffc0a830d1e5bbd6d1227974dc0',
+  'native_key' => 'googlesitemap.cache_partition',
+  'object' => '{"key":"googlesitemap.cache_partition","value":"googlesitemap","xtype":"textfield","namespace":"googlesitemap","area":"default","editedon":null}',
+);

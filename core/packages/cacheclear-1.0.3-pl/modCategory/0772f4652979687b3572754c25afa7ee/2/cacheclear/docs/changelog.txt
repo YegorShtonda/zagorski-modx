@@ -1,0 +1,18 @@
+Changelog for CacheClear
+
+CacheClear 1.0.3
+---------------------------------
+Update for MODX 2.3
+Update MODX constants
+
+CacheClear 1.0.2
+---------------------------------
+Leave error log alone
+
+CacheClear 1.0.1
+---------------------------------
+Fixed tutorial link in readme
+
+CacheClear 1.0.0
+---------------------------------
+Initial Version

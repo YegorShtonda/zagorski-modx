@@ -1,0 +1,59 @@
+<?php return array (
+  'unique_key' => 'category',
+  'preserve_keys' => false,
+  'update_object' => true,
+  'related_objects' => 
+  array (
+    'Snippets' => 
+    array (
+      '095f9181633f41f3c443bb30931b1140' => 
+      array (
+        'preserve_keys' => false,
+        'update_object' => true,
+        'unique_key' => 'name',
+        'class' => 'modSnippet',
+        'object' => '{"id":1,"source":0,"property_preprocess":0,"name":"CacheClear","description":"Delete all files in the core\\/cache directory","editor_type":0,"category":0,"cache_type":0,"snippet":"\\/**\\n * CacheClear snippet for CacheClear extra\\n *\\n * Copyright 2012-2014 by Bob Ray <http:\\/\\/bobsguides.com>\\n * Created on 12-14-2012\\n *\\n * CacheClear is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * CacheClear is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * CacheClear; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package cacheclear\\n *\\/\\n\\n\\/**\\n * Description\\n * -----------\\n * Delete all files in the core\\/cache directory\\n *\\n * Variables\\n * ---------\\n * @var $modx modX\\n * @var $scriptProperties array\\n *\\n * @package cacheclear\\n **\\/\\n\\nif (!function_exists(\\"rrmdir\\")) {\\n    function rrmdir($dir) {\\n        if (is_dir($dir)) {\\n            $objects = scandir($dir);\\n            foreach ($objects as $object) {\\n                if ($object != \\".\\" && $object != \\"..\\") {\\n                    if (filetype($dir . \\"\\/\\" . $object) == \\"dir\\") {\\n                        rrmdir($dir . \\"\\/\\" . $object);\\n                    } else {\\n                        unlink($dir . \\"\\/\\" . $object);\\n                    }\\n                }\\n            }\\n            reset($objects);\\n            rmdir($dir);\\n        }\\n    }\\n}\\n\\n$output = \'\';\\n$modx->lexicon->load(\'cacheclear:default\');\\n\\n$cm = $modx->getCacheManager();\\n$cacheDir = $cm->getCachePath();\\n\\n$cacheDir = rtrim($cacheDir, \'\\/\\\\\\\\\');\\n\\n$output .= \'<p>\' . $modx->lexicon(\'cc_cache_dir\') . \': \' . $cacheDir;\\n$output .= \'<br \\/>\';\\n\\n$files = scandir($cacheDir);\\n\\n\\n$output .= \\"<ul>\\\\n\\";\\nforeach ($files as $file) {\\n    if ($file == \'.\' || $file == \'..\') {\\n        continue;\\n    }\\n    if (is_dir($cacheDir . \'\\/\' . $file)) {\\n        if ($file == \'logs\') {\\n            continue;\\n        }\\n        $output .= \\"\\\\n<li>\\" . $modx->lexicon(\'cc_removing\') . \': \' . $file . \'<\\/li>\';\\n        rrmdir($cacheDir . \'\\/\' . $file);\\n        if (is_dir($cacheDir . \'\\/\' . $file)) {\\n            $output .= \\"\\\\n<li>\\" . $modx->lexicon(\'cc_failed_to_remove\') . \': \' . $file . \'<\\/li>\';\\n        }\\n    } else {\\n        unlink($cacheDir . \'\\/\' . $file);\\n    }\\n}\\n\\n$output .= \\"\\\\n<\\/p><\\/ul><p>\\" . $modx->lexicon(\'cc_finished\') . \\"<\\/p>\\";\\n\\n\\nreturn $output;","locked":0,"properties":"a:0:{}","moduleguid":"","static":0,"static_file":"","content":"\\/**\\n * CacheClear snippet for CacheClear extra\\n *\\n * Copyright 2012-2014 by Bob Ray <http:\\/\\/bobsguides.com>\\n * Created on 12-14-2012\\n *\\n * CacheClear is free software; you can redistribute it and\\/or modify it under the\\n * terms of the GNU General Public License as published by the Free Software\\n * Foundation; either version 2 of the License, or (at your option) any later\\n * version.\\n *\\n * CacheClear is distributed in the hope that it will be useful, but WITHOUT ANY\\n * WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR\\n * A PARTICULAR PURPOSE. See the GNU General Public License for more details.\\n *\\n * You should have received a copy of the GNU General Public License along with\\n * CacheClear; if not, write to the Free Software Foundation, Inc., 59 Temple\\n * Place, Suite 330, Boston, MA 02111-1307 USA\\n *\\n * @package cacheclear\\n *\\/\\n\\n\\/**\\n * Description\\n * -----------\\n * Delete all files in the core\\/cache directory\\n *\\n * Variables\\n * ---------\\n * @var $modx modX\\n * @var $scriptProperties array\\n *\\n * @package cacheclear\\n **\\/\\n\\nif (!function_exists(\\"rrmdir\\")) {\\n    function rrmdir($dir) {\\n        if (is_dir($dir)) {\\n            $objects = scandir($dir);\\n            foreach ($objects as $object) {\\n                if ($object != \\".\\" && $object != \\"..\\") {\\n                    if (filetype($dir . \\"\\/\\" . $object) == \\"dir\\") {\\n                        rrmdir($dir . \\"\\/\\" . $object);\\n                    } else {\\n                        unlink($dir . \\"\\/\\" . $object);\\n                    }\\n                }\\n            }\\n            reset($objects);\\n            rmdir($dir);\\n        }\\n    }\\n}\\n\\n$output = \'\';\\n$modx->lexicon->load(\'cacheclear:default\');\\n\\n$cm = $modx->getCacheManager();\\n$cacheDir = $cm->getCachePath();\\n\\n$cacheDir = rtrim($cacheDir, \'\\/\\\\\\\\\');\\n\\n$output .= \'<p>\' . $modx->lexicon(\'cc_cache_dir\') . \': \' . $cacheDir;\\n$output .= \'<br \\/>\';\\n\\n$files = scandir($cacheDir);\\n\\n\\n$output .= \\"<ul>\\\\n\\";\\nforeach ($files as $file) {\\n    if ($file == \'.\' || $file == \'..\') {\\n        continue;\\n    }\\n    if (is_dir($cacheDir . \'\\/\' . $file)) {\\n        if ($file == \'logs\') {\\n            continue;\\n        }\\n        $output .= \\"\\\\n<li>\\" . $modx->lexicon(\'cc_removing\') . \': \' . $file . \'<\\/li>\';\\n        rrmdir($cacheDir . \'\\/\' . $file);\\n        if (is_dir($cacheDir . \'\\/\' . $file)) {\\n            $output .= \\"\\\\n<li>\\" . $modx->lexicon(\'cc_failed_to_remove\') . \': \' . $file . \'<\\/li>\';\\n        }\\n    } else {\\n        unlink($cacheDir . \'\\/\' . $file);\\n    }\\n}\\n\\n$output .= \\"\\\\n<\\/p><\\/ul><p>\\" . $modx->lexicon(\'cc_finished\') . \\"<\\/p>\\";\\n\\n\\nreturn $output;"}',
+        'guid' => '3fa4b0dc02468345905ce8ac94b008c4',
+        'native_key' => 1,
+        'signature' => '09283bf01a437d93a8d896659ea06262',
+      ),
+    ),
+  ),
+  'related_object_attributes' => 
+  array (
+    'Snippets' => 
+    array (
+      'preserve_keys' => false,
+      'update_object' => true,
+      'unique_key' => 'name',
+    ),
+  ),
+  'namespace' => 'cacheclear',
+  'resolve' => 
+  array (
+    0 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"cacheclear-1.0.3-pl\\/modCategory\\/0772f4652979687b3572754c25afa7ee.resource.resolver.resolver","type":"php","name":"resource.resolver"}',
+    ),
+    1 => 
+    array (
+      'type' => 'php',
+      'body' => '{"source":"cacheclear-1.0.3-pl\\/modCategory\\/0772f4652979687b3572754c25afa7ee.cacheclear.resolver.resolver","type":"php","name":"cacheclear.resolver"}',
+    ),
+    2 => 
+    array (
+      'type' => 'file',
+      'body' => '{"source":"cacheclear-1.0.3-pl\\/modCategory\\/0772f4652979687b3572754c25afa7ee\\/2\\/","target":"return MODX_CORE_PATH . \'components\\/\';","name":"cacheclear"}',
+    ),
+  ),
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'e7d911403c68c4c82515793dec778ef0',
+  'package' => 'modx',
+  'class' => 'modCategory',
+  'signature' => '0772f4652979687b3572754c25afa7ee',
+  'native_key' => 1,
+  'object' => '{"id":1,"parent":0,"category":"CacheClear","rank":0}',
+);

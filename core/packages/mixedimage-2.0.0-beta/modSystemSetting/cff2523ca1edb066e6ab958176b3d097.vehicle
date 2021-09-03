@@ -1,0 +1,16 @@
+<?php return array (
+  'unique_key' => 'key',
+  'preserve_keys' => true,
+  'update_object' => false,
+  'namespace' => 'mixedimage',
+  'resolve' => NULL,
+  'validate' => NULL,
+  'vehicle_package' => 'transport',
+  'vehicle_class' => 'xPDOObjectVehicle',
+  'guid' => 'f37445a84de8e8000d835a0b70722163',
+  'package' => 'modx',
+  'class' => 'modSystemSetting',
+  'signature' => 'cff2523ca1edb066e6ab958176b3d097',
+  'native_key' => 'mixedimage.random_lenght',
+  'object' => '{"key":"mixedimage.random_lenght","value":6,"xtype":"textfield","namespace":"mixedimage","area":"Default","editedon":null}',
+);
